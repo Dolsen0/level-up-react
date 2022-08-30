@@ -9,8 +9,8 @@ export function Fun(){
     return(
         <>
         <Card bg='info' onClick={()=> setFunTime(funTime + 15)}>
-            <Card.Body id='fun'>Fun</Card.Body>  
-            <p>{funTime}</p>
+            <Card.Header as="h6">Fun</Card.Header>
+            <Card.Body id='fun'>{funTime}</Card.Body>  
         </Card>
         </>
     )

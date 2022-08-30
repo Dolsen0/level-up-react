@@ -9,8 +9,8 @@ export function Mental(){
     return(
         <>
         <Card bg='primary' onClick={()=>(setMentalTime(mentalTime + 15))}>
-            <Card.Body bg='secondary' id='mental'>Mental</Card.Body>
-            <p>{mentalTime}</p>  
+            <Card.Header as= "h6">Mental</Card.Header>
+            <Card.Body bg='secondary' id='mental'>{mentalTime}</Card.Body> 
         </Card>
         </>
     )

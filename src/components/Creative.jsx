@@ -8,8 +8,8 @@ export function Creative(){
     return(
         <>
         <Card bg='warning' onClick={()=>{setCreativeTime(creativeTime + 15)}}>
-       <Card.Body id='creative' variant="outline-primary">Creative</Card.Body>
-       <p>{creativeTime}</p>  
+            <Card.Header as="h6">Creative</Card.Header>
+       <Card.Body id='creative' variant="outline-primary">{creativeTime}</Card.Body>
         </Card>
         </>
     )
