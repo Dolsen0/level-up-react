@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
+import AllEntries from './components/AllEntries.jsx';
 import { Categories } from './components/Categories.jsx';
-import { MainScore } from './components/MainScore.jsx';
+import LoginButton from './components/Login.jsx';
+import  MainScore  from './components/MainScore.jsx';
 
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
     <div className="App">
       <>
       <h1>Level-Up</h1>
+      <LoginButton/>
       <div className='mainScore'>
       <MainScore />
       </div>
@@ -18,6 +21,7 @@ function App() {
         <Categories/>
         </>
         </div>  
+        <AllEntries/>
       </>
     </div>
   );

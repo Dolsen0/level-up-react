@@ -1,7 +1,10 @@
+import Button from 'react-bootstrap/Button';
+
+
 export function Fun(){
     return(
         <>
-       <div id='fun' onClick={()=>{console.log("Fun!")}}>Fun</div>  
+       <Button id='fun' variant="outline-primary" onClick={()=>{console.log("Fun!")}}>Fun</Button>  
         </>
     )
 }

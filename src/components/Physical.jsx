@@ -1,7 +1,9 @@
+import Button from 'react-bootstrap/Button';
+
 export function Physical(){
     return(
         <>
-       <div id='physical' onClick={()=>{console.log("Physical")}}>Physical</div>  
+       <Button id='physical' variant="outline-primary" onClick={()=>{console.log("Physical")}}>Physical</Button>  
         </>
     )
 }

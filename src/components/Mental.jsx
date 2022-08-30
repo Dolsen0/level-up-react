@@ -1,7 +1,9 @@
+import Button from 'react-bootstrap/Button';
+
 export function Mental(){
     return(
         <>
-       <div id='mental' onClick={()=>(console.log("mental"))}>Mental</div>  
+       <Button id='mental' variant="outline-primary" onClick={()=>(console.log("mental"))}>Mental</Button>  
         </>
     )
 }

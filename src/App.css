@@ -5,20 +5,25 @@
   text-align: center;
   width: 40vw;
   height: 40vw;
+  background-color:lavender;
+}
+
+body{
+  background-color: aqua;
 }
 
 .mainScore{
-  background-color: aqua;
+  display: flex;
+  justify-content: center;
 }
 
 .categories{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:bisque;
 }
 
-#mental{
+/* #mental{
   background-color: burlywood;
   
 }
@@ -33,4 +38,4 @@
 
 #fun{
   background-color: blue;
-}
+} */
