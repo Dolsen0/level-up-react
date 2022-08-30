@@ -1,12 +1,16 @@
+import { useState } from 'react';
 import { Card } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
+
 
 
 export function Fun(){
+    const[funTime, setFunTime] = useState(0)
+
     return(
         <>
-        <Card bg='info'>
-            <Card.Body id='fun' onClick={()=>{console.log("Fun!")}}>Fun</Card.Body>  
+        <Card bg='info' onClick={()=> setFunTime(funTime + 1)}>
+            <Card.Body id='fun'>Fun</Card.Body>  
+            <p>{funTime}</p>
         </Card>
         </>
     )

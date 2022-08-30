@@ -1,16 +1,17 @@
 import React from 'react';
 import './App.css';
-import AllEntries from './components/AllEntries.jsx';
+// import AllEntries from './components/AllEntries.jsx';
 import { Categories } from './components/Categories.jsx';
 import LoginButton from './components/Login.jsx';
 import  MainScore  from './components/MainScore.jsx';
+import NavBar from './components/NavBar.jsx';
 
 
 function App() {
   return (
     <div className="App">
       <>
-      <h1>Level-Up</h1>
+      <NavBar/>
       <LoginButton/>
       <div className='mainScore'>
       <MainScore />
@@ -21,7 +22,7 @@ function App() {
         <Categories/>
         </>
         </div>  
-        <AllEntries/>
+        {/* <AllEntries/> */}
       </>
     </div>
   );

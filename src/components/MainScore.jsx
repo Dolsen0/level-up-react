@@ -12,9 +12,9 @@ export default function MainScore({userScore, setUserScore}){
 
     if(!userScore){
         return(
-            <Card bg="Secondary" key = "Secondary" border="secondary" style={{ width: '18rem'}}>
+            <Card bg= "secondary" key = "secondary" border="primary" style={{ width: '18rem'}}>
                 <Card body>
-                    <h2>No Score Available</h2>
+                    <h2>0</h2>
                 </Card>
             </Card>
         ) 

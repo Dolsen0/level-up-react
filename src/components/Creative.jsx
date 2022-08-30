@@ -1,13 +1,15 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useState } from 'react';
 
 
 
 export function Creative(){
+    const [creativeTime, setCreativeTime] = useState(0)
     return(
         <>
-        <Card bg='warning'>
-       <Card.Body id='creative' variant="outline-primary" onClick={()=>{(console.log("Creative"))}}>Creative</Card.Body>  
+        <Card bg='warning' onClick={()=>{setCreativeTime(creativeTime + 1)}}>
+       <Card.Body id='creative' variant="outline-primary">Creative</Card.Body>
+       <p>{creativeTime}</p>  
         </Card>
         </>
     )

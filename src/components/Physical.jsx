@@ -1,11 +1,15 @@
 import { Card } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
+import { useState } from 'react';
+
 
 export function Physical(){
+    const[physicalTime, setPhysicalTime] = useState(0);
+
     return(
         <>
-        <Card bg='secondary'>
-       <Card.Body id='physical' onClick={()=>{console.log("Physical")}}>Physical</Card.Body>  
+        <Card bg='secondary' onClick={()=>{setPhysicalTime(physicalTime + 1)}}>
+       <Card.Body id='physical'>Physical</Card.Body>  
+       <p>{physicalTime}</p>
         </Card>
         </>
     )
