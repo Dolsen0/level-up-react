@@ -1,9 +1,10 @@
-import { FormControl, FormGroup, FormLabel, FormText } from "react-bootstrap";
+import { Alert, FormControl, FormGroup, FormLabel } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 export default function LoginForm(){
     return(
+        <Alert variant="primary">   
         <Form>
             <FormGroup>
                 <FormLabel>Email Address</FormLabel>
@@ -18,5 +19,6 @@ export default function LoginForm(){
             <Button variant="primary">Submit</Button>
 
         </Form>
+        </Alert>
     )
 }
