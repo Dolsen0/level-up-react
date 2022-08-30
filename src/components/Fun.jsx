@@ -1,10 +1,13 @@
+import { Card } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 
 
 export function Fun(){
     return(
         <>
-       <Button id='fun' variant="outline-primary" onClick={()=>{console.log("Fun!")}}>Fun</Button>  
+        <Card bg='info'>
+            <Card.Body id='fun' onClick={()=>{console.log("Fun!")}}>Fun</Card.Body>  
+        </Card>
         </>
     )
 }

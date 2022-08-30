@@ -1,9 +1,12 @@
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card'
 
 export function Mental(){
     return(
         <>
-       <Button id='mental' variant="outline-primary" onClick={()=>(console.log("mental"))}>Mental</Button>  
+        <Card bg='primary'>
+            <Card.Body bg='secondary' id='mental' onClick={()=>(console.log("mental"))}>Mental</Card.Body>  
+        </Card>
         </>
     )
 }
