@@ -7,9 +7,9 @@ export function Physical(){
 
     return(
         <>
-        <Card bg='secondary' onClick={()=>{setPhysicalTime(physicalTime + 15)}}>
+        <Card bg='secondary' text='white' onClick={()=>{setPhysicalTime(physicalTime + 15)}}>
             <Card.Header as= "h6">Physical</Card.Header>
-       <Card.Body id='physical'>{physicalTime}</Card.Body>  
+       <Card.Body id='physical'>{physicalTime}</Card.Body> 
         </Card>
         </>
     )
