@@ -8,7 +8,7 @@ export function Fun(){
 
     return(
         <>
-        <Card bg='info' onClick={()=> setFunTime(funTime + 1)}>
+        <Card bg='info' onClick={()=> setFunTime(funTime + 15)}>
             <Card.Body id='fun'>Fun</Card.Body>  
             <p>{funTime}</p>
         </Card>

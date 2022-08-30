@@ -1,4 +1,5 @@
 import { Button } from "react-bootstrap"
+import LoginForm from "./LoginForm"
 
 export default function LoginButton(req, res){
     return(
