@@ -11,6 +11,7 @@ export function Physical(){
             <Card.Header as= "h6">Physical</Card.Header>
        <Card.Body id='physical'>{physicalTime}</Card.Body> 
         </Card>
+        
         </>
     )
 }

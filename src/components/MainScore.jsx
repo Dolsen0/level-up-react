@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react"
 import  Card  from "react-bootstrap/Card"
 
-export default function MainScore({userScore, setUserScore}){
 
-    const[mainScore, setMainScore] = useState(0)
+export default function MainScore({userScore}){
+
+    const[mainScore, setMainScore] = useState(5)
 
     useEffect(() => {
-        fetch('https://level-up-do.web.app/')
+        fetch('https://level-up-do.web.app/user')
+        // fetch('http://localhost:5785')
         .then(results => results.json())
-        .then(score => setUserScore(score))
+        .then(score => setMainScore(mainScore))
         .catch(err => console.error(err))
         
-    }, [setUserScore])
+    }, [])
 
     if(!userScore){
         return(

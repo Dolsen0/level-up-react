@@ -16,7 +16,7 @@ export default function LoginForm(){
                 <FormControl type="password" placeholder="Password"/>
             </FormGroup>
 
-            <Button variant="primary">Submit</Button>
+            <Button variant="primary" onClick={()=>{console.log("logging in")}} type="submit">Login</Button>
 
         </Form>
         </Alert>
