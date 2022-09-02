@@ -4,6 +4,7 @@ import './App.css';
 import { Categories } from './components/Categories.jsx';
 import  MainScore  from './components/MainScore.jsx';
 import NavBar from './components/NavBar.jsx';
+import ProgressMix from './components/ProgressMix.jsx';
 
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
       <div className='mainScore'>
       <MainScore />
       </div>
+      <div className='progressBar'>
+      <ProgressMix />
+      </div>
+
 
       <div className='categories'>
         <>
