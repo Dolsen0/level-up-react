@@ -4,13 +4,13 @@ import  Card  from "react-bootstrap/Card"
 
 export default function MainScore({userScore}){
 
-    const[mainScore, setMainScore] = useState(5)
+    const[mainScore, setMainScore] = useState(0)
 
     useEffect(() => {
         fetch('https://level-up-do.web.app/user')
         // fetch('http://localhost:5785')
         .then(results => results.json())
-        .then(score => setMainScore(mainScore))
+        .then(results => setMainScore(results.score))
         .catch(err => console.error(err))
         
     }, [])
@@ -27,11 +27,7 @@ export default function MainScore({userScore}){
     return(
         <Card border="secondary" style={{ width: '18rem'}}>
         <Card body>
-        <ul>
-            {userScore.map(score => (
-                <li key={score.id}>{score.score}</li>
-                ))}
-        </ul>
+            {mainScore}
         </Card>
         </Card>
     )
