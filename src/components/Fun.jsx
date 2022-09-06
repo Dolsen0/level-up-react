@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { Card } from 'react-bootstrap';
 
@@ -5,6 +6,10 @@ import { Card } from 'react-bootstrap';
 
 export function Fun(){
     const[funTime, setFunTime] = useState(0)
+
+    useEffect(()=> {
+        console.log(`you clicked fun - ${funTime} points`)
+    })
     
 
     return(

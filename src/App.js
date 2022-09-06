@@ -28,6 +28,8 @@ function App() {
         {/* <AllEntries/> */}
 
       </>
+
+      Level-Up ©2022 Created by Derek Olsen
     </div>
   );
 }

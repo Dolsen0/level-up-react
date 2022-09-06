@@ -1,9 +1,14 @@
 import { Card } from 'react-bootstrap';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 
 export function Physical(){
     const[physicalTime, setPhysicalTime] = useState(0);
+
+    useEffect(() => {
+        document.title = `you clicked ${physicalTime} times`
+    })
 
     return(
         <>

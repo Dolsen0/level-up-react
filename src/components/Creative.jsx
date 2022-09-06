@@ -1,10 +1,17 @@
 import Card from 'react-bootstrap/Card';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 
 
 export function Creative(){
+    
     const [creativeTime, setCreativeTime] = useState(0)
+
+    useEffect(() => {
+        console.log(`you clicked ${creativeTime}`)
+    });
+
     return(
         <>
         <Card bg='warning' text='white' onClick={()=>{setCreativeTime(creativeTime + 15)}}>

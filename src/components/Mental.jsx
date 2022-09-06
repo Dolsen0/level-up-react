@@ -1,10 +1,15 @@
 // import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card'
 import { useState } from 'react'
+import { useEffect } from 'react'
 
 export function Mental(){
 
     const [mentalTime, setMentalTime] = useState(0)
+
+    useEffect(()=>{
+        console.log(`you clicked mental worth ${mentalTime} points`)
+    })
 
     return(
         <>
