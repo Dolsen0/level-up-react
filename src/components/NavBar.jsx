@@ -12,11 +12,11 @@ export default function NavBar(){
         <>
         <Navbar bg="light" className="navbar" sticky="top" >
             <Container>
-                <Navbar.Brand>Level Up</Navbar.Brand>
+                <Navbar.Brand> <h4>Level Up</h4></Navbar.Brand>
                 <Navbar.Brand>
-                    <FirstName/>
+                    <h4>Hello <FirstName/></h4>
                     </Navbar.Brand>
-                <Navbar.Brand>{new Date().toLocaleDateString()}</Navbar.Brand>
+                <Navbar.Brand> <h4>  {new Date().toLocaleDateString()}  </h4>  </Navbar.Brand>
                 <div className="navButtons">
                 <ButtonGroup>
                     <LoginButton/>

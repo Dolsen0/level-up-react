@@ -10,11 +10,11 @@ export default function SignupForm(){
         event.preventDefault()
         console.log("clicking", form)
 
-        fetch('https://level-up-do.web.app/signup',{
+        fetch('https://level-up-do.web.app/user',{
             method: 'POST',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify(form),    
-        })
+        },[])
         .then(res => res.json())
         .then(data => console.log('success:', data ))
         .catch(err => console.error(err))

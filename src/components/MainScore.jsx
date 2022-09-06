@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react"
 import  Card  from "react-bootstrap/Card"
 import CardHeader from "react-bootstrap/esm/CardHeader"
-import { Creative } from "./Creative.jsx"
-
 
 export default function MainScore({userScore}){
 
@@ -19,7 +17,7 @@ export default function MainScore({userScore}){
 
     return(
         <Card bg= "secondary" key = "secondary" border="primary" style={{ width: '18rem'}}>
-            <CardHeader> Daily Points </CardHeader>
+            <CardHeader> <h5>Daily Points</h5>  </CardHeader>
             <Card body>
                 <h2>{mainScore}</h2>
             </Card>
