@@ -13,7 +13,9 @@ export default function NavBar(){
         <Navbar bg="light" className="navbar" sticky="top" >
             <Container>
                 <Navbar.Brand>Level Up</Navbar.Brand>
-                <Navbar.Brand>{FirstName()}</Navbar.Brand>
+                <Navbar.Brand>
+                    <FirstName/>
+                    </Navbar.Brand>
                 <Navbar.Brand>{new Date().toLocaleDateString()}</Navbar.Brand>
                 <div className="navButtons">
                 <ButtonGroup>

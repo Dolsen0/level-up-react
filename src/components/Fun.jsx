@@ -5,6 +5,7 @@ import { Card } from 'react-bootstrap';
 
 export function Fun(){
     const[funTime, setFunTime] = useState(0)
+    
 
     return(
         <>

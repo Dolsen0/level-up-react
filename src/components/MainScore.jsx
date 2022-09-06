@@ -15,20 +15,11 @@ export default function MainScore({userScore}){
         
     }, [])
 
-    if(!userScore){
-        return(
-            <Card bg= "secondary" key = "secondary" border="primary" style={{ width: '18rem'}}>
-                <Card body>
-                    <h2>{mainScore}</h2>
-                </Card>
-            </Card>
-        ) 
-    }
     return(
-        <Card border="secondary" style={{ width: '18rem'}}>
-        <Card body>
-            {mainScore}
+        <Card bg= "secondary" key = "secondary" border="primary" style={{ width: '18rem'}}>
+            <Card body>
+                <h2>{mainScore}</h2>
+            </Card>
         </Card>
-        </Card>
-    )
+    ) 
 }
