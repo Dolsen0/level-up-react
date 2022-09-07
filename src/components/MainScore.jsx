@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react"
 import  Card  from "react-bootstrap/Card"
 import CardHeader from "react-bootstrap/esm/CardHeader"
+import { Creative } from "./Creative"
+import { Fun } from "./Fun"
+import { Mental } from "./Mental"
+import { Physical } from "./Physical"
 
 export default function MainScore({userScore}){
 
     const[mainScore, setMainScore] = useState(0)
+
 
     useEffect(() => {
         fetch('https://level-up-do.web.app/user')
@@ -16,12 +21,21 @@ export default function MainScore({userScore}){
     }, [])
 
     return(
+        <>
         <Card bg= "secondary" key = "secondary" border="primary" style={{ width: '18rem'}}>
             <CardHeader> <h5>Daily Points</h5>  </CardHeader>
             <Card body>
                 <h2>{mainScore}</h2>
             </Card>
         </Card>
+        
+        <Mental/>
+        <Creative/>
+        <Physical/>
+        <Fun/>
+
+
+        </>
     ) 
 }
 
