@@ -1,48 +1,47 @@
-import { useEffect, useState } from "react"
-import  Card  from "react-bootstrap/Card"
-import CardHeader from "react-bootstrap/esm/CardHeader"
-import { Creative } from "./Creative"
-import { Fun } from "./Fun"
-import { Mental } from "./Mental"
-import { Physical } from "./Physical"
+import { useEffect, useState } from "react";
+import Card from "react-bootstrap/Card";
+import CardHeader from "react-bootstrap/esm/CardHeader";
+import { Creative } from "./Creative";
+import { Fun } from "./Fun";
+import { Mental } from "./Mental";
+import { Physical } from "./Physical";
 
-export default function MainScore({userScore}){
+export default function MainScore({ userScore }) {
+  const [mainScore, setMainScore] = useState(0);
 
-    const[mainScore, setMainScore] = useState(0)
+  useEffect(() => {
+    fetch("https://level-up-do.web.app/user")
+      // fetch('http://localhost:5785')
+      .then((results) => results.json())
+      .then((results) => setMainScore(results.score))
+      .catch((err) => console.error(err));
+  }, []);
 
-
-    useEffect(() => {
-        fetch('https://level-up-do.web.app/user')
-        // fetch('http://localhost:5785')
-        .then(results => results.json())
-        .then(results => setMainScore(results.score))
-        .catch(err => console.error(err))
-        
-    }, [])
-
-    return(
-        <>
-        <Card bg= "secondary" key = "secondary" border="primary" style={{ width: '18rem'}}>
-            <CardHeader> <h5>Daily Points</h5>  </CardHeader>
-            <Card body>
-                <h2>{mainScore}</h2>
-            </Card>
+  return (
+    <>
+      <Card
+        bg="secondary"
+        key="secondary"
+        border="primary"
+        style={{ width: "18rem", 
+        height: "18rem"}}
+      >
+        <CardHeader>
+          {" "}
+          <h5>Daily Points</h5>{" "}
+        </CardHeader>
+        <Card body>
+          <h2>{mainScore}</h2>
         </Card>
         
-        <Mental/>
-        <Creative/>
-        <Physical/>
-        <Fun/>
+        <Card>
 
-
-        </>
-    ) 
+      <Mental />
+      <Creative />
+      <Physical />
+      <Fun />
+        </Card>
+      </Card>
+    </>
+  );
 }
-
-
-
-
-
-
-
-
