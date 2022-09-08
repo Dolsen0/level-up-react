@@ -8,18 +8,16 @@
   background-color:lavender;
 }
 
+.scoreboard{
+  display: flex;
+  flex-direction: column;
+}
 
 .mainScore{
   display: flex;
   justify-content: center;
 }
 
-.categories{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: red;
-}
 
 .catRow1{
   display: flex;
