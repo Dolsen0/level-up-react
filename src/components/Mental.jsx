@@ -22,7 +22,7 @@ export function Mental() {
           {mentalTime}
         </Card.Body>
         <ButtonGroup>
-          <Button variant="primary" onClick={() => setMentalTime(15)}>20 Minutes</Button>
+          <Button variant="primary" onClick={() => setMentalTime(15)}>20 Minutes or less</Button>
           <Button variant="primary" onClick={() => setMentalTime(20)}>40 Minutes</Button>
           <Button variant="primary" onClick={() => setMentalTime(25)}>60 Minutes or more</Button>
         </ButtonGroup>

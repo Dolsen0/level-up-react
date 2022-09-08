@@ -20,7 +20,7 @@ export function Physical() {
         <Card.Header as="h6">Physical</Card.Header>
         <Card.Body id="physical">{physicalTime}</Card.Body>
         <ButtonGroup>
-          <Button variant="secondary" onClick={() => setPhysicalTime(15)}>20 Minutes</Button>
+          <Button variant="secondary" onClick={() => setPhysicalTime(15)}>20 Minutes or less</Button>
           <Button variant="secondary" onClick={() => setPhysicalTime(20)}>40 Minutes</Button>
           <Button variant="secondary" onClick={() => setPhysicalTime(25)}>60 Minutes or more</Button>
         </ButtonGroup>

@@ -24,7 +24,7 @@ export function Fun() {
         <Card.Body id="fun">{funTime}</Card.Body>
         {/* <Card.Footer>  */}
           <ButtonGroup>
-            <Button variant="info" onClick={() => setFunTime(15)}>20 Minutes</Button>
+            <Button variant="info" onClick={() => setFunTime(15)}>20 Minutes or less</Button>
             <Button variant="info" onClick={() => setFunTime(20)}>40 Minutes</Button>
             <Button variant="info" onClick={() => setFunTime(25)}>60 Minutes or more</Button>
             </ButtonGroup> 

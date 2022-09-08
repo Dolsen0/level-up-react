@@ -5,7 +5,6 @@
   padding: 18px;
   text-align: center;
   /* width: 40vw; */
-  height: 40vw;
   background-color:lavender;
 }
 
@@ -19,6 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: red;
 }
 
 .catRow1{
@@ -27,7 +27,9 @@
   align-items: center;
 }
 
-
+#mainScoreHeader{
+  color: whitesmoke;
+}
 
 
  /* #mental{
@@ -42,7 +44,7 @@
 #physical{
   background-color: darkgrey;
 }
-
 #fun{
   background-color: blue;
-} */ 
+} 
+*/

@@ -10,7 +10,8 @@ export default function SignupForm() {
     console.log("clicking", form);
 
     fetch(
-      "https://level-up-do.web.app/user",
+      // "https://level-up-do.web.app/signup",
+      "http://localhost:5785/signup",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -73,7 +74,7 @@ export default function SignupForm() {
 
           <Button
             variant="primary"
-            onClick={handleFormSubmit}
+            onClick={console.log(handleFormSubmit)}
             type="submit"
             id="signup"
           >
