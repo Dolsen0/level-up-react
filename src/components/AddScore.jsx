@@ -5,24 +5,24 @@ export default function AddScore(){
     const[score, setScore] = useState('')
     const addScore = () => {
          // fetch("localhost:5785/user")
-    fetch("https://level-up-do.web.app/user", {
+    fetch("https://level-up-do.web.app/user/userid goes here", {
         method: 'POST',
         mode: 'cors',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({score, done:false})
+        body: JSON.stringify({data:score, done:false})
     })
         .then(results => results.json())
         .then(data=>{
-            setScore(data);
+            setScore(data.body);
         })
         .catch(err => console.error(err))
     }
 
     return(
         <div className="newScore">
-            <Button onClick={e => setScore(e.target.value) + console.log({score})}
+            <Button onClick={e => setScore(e => setScore(e.target.value)) + console.log({score})}
             // enterButton="Add"
             // size="large"
             // e => setScore(e.target.value)

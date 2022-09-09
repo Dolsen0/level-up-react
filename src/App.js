@@ -4,6 +4,7 @@ import "./App.css";
 // import { Categories } from './components/Categories.jsx';
 import MainScore from "./components/MainScore.jsx";
 import NavBar from "./components/NavBar.jsx";
+// import {Categories} from "./components/Categories.jsx"
 // import ProgressMix from './components/ProgressMix.jsx';
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
           <>{/* <Categories/> */}</>
         </div>
         {/* <AllEntries/> */}
+
+        {/* <Categories/> */}
 
         <footer>Level-Up ©2022 Created by Derek Olsen</footer>
       </>

@@ -16,8 +16,8 @@ export default function MainScore() {
     // fetch("https://level-up-do.web.app/user")
       .then((results) => results.json())
       .then((data) => {
-        console.log({score: data[0].score})
-        setMainScore(data[0].score)
+        console.log({score: data.score})
+        setMainScore(data.score)
       })
       .catch((err) => console.error(err));
   }, [setMainScore]);
@@ -116,8 +116,10 @@ export default function MainScore() {
           </ButtonGroup>
         </Card>
         <Button
-          onClick={() =>
-            setMainScore(creativeTime + physicalTime + funTime + mentalTime)
+          onClick={async(e) =>
+            await setMainScore(creativeTime + physicalTime + funTime + mentalTime)+
+            console.log(mainScore)
+
           }
         >
           Add Points
