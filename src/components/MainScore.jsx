@@ -5,46 +5,45 @@ import CardHeader from "react-bootstrap/esm/CardHeader";
 import AddScore from "./AddScore.jsx";
 
 export default function MainScore() {
-  let [mainScore, setMainScore] = useState(0);
+  const [mainScore, setMainScore] = useState(0);
+  const [dailyScore, setDailyScore] = useState(0);
   const [creativeTime, setCreativeTime] = useState(0);
   const [funTime, setFunTime] = useState(0);
   const [physicalTime, setPhysicalTime] = useState(0);
   const [mentalTime, setMentalTime] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:5785/user")
-    // fetch("https://level-up-do.web.app/user")
+    // fetch("http://localhost:5785/user/15d9vJM7UV04Nh2vY2Lx")
+      fetch("https://level-up-do.web.app/user/15d9vJM7UV04Nh2vY2Lx")
       .then((results) => results.json())
       .then((data) => {
-        console.log({score: data.score})
-        setMainScore(data.score)
+        console.log({ score: data.score });
+        setMainScore(data.score);
       })
       .catch((err) => console.error(err));
   }, [setMainScore]);
 
   return (
     <>
-    <div className="scoreboard">
-    <ButtonGroup>
-    <Card
-        bg="secondary"
-        key="secondary"
-        border="primary"
-        style={{ width: "18rem", height: "18rem" }}
-      >
-        <CardHeader>
-          {" "}
-          <h5 id="mainScoreHeader">Daily Points</h5>{" "}
-        </CardHeader>
-        <Card body>
-          <h2>{mainScore}</h2>
-        </Card>
-        <AddScore/>
-      </Card>
-
-      </ButtonGroup>
+      <div className="scoreboard">
+        <ButtonGroup>
+          <Card
+            bg="secondary"
+            key="secondary"
+            border="primary"
+            style={{ width: "18rem", height: "18rem" }}
+          >
+            <CardHeader>
+              {" "}
+              <h5 id="mainScoreHeader">Daily Points</h5>{" "}
+            </CardHeader>
+            <Card body>
+              <h2>{mainScore}</h2>
+            </Card>
+          </Card>
+        </ButtonGroup>
       </div>
-      
+
       <CardGroup>
         <Card bg="warning" text="white">
           <Card.Header as="h6">Creative</Card.Header>
@@ -85,7 +84,6 @@ export default function MainScore() {
         <Card bg="primary" text="white">
           <Card.Header as="h6">Mental</Card.Header>
           <Card.Body bg="secondary" id="mental">
-            {}
           </Card.Body>
           <ButtonGroup>
             <Button variant="primary" onClick={() => setMentalTime(15)}>
@@ -115,19 +113,22 @@ export default function MainScore() {
             </Button>
           </ButtonGroup>
         </Card>
+        <ButtonGroup>
+        <CardGroup>
+          
+        </CardGroup>
         <Button
-          onClick={async(e) =>
-            await setMainScore(creativeTime + physicalTime + funTime + mentalTime)+
-            console.log(mainScore)
-
-          }
-        >
+          onClick={async (e) =>
+            ( await setDailyScore(
+              creativeTime + physicalTime + funTime + mentalTime
+              )) + console.log(dailyScore)
+            }
+            >
           Add Points
         </Button>
+        <AddScore dailyScore={dailyScore} setMainScore={setMainScore} />
+          </ButtonGroup>
       </CardGroup>
-
-      
-     
     </>
   );
 }

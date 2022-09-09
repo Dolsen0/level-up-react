@@ -8,6 +8,10 @@ import NavBar from "./components/NavBar.jsx";
 // import ProgressMix from './components/ProgressMix.jsx';
 
 function App() {
+  // const [dailyScore, setDailyScore] = useState();
+
+
+
   return (
     <div className="App">
       <>
