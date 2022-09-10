@@ -2,9 +2,7 @@
 import { Button } from "react-bootstrap";
 
 export default function AddScore({ dailyScore, setMainScore }){
-    // const[score, setScore] = useState('')
     const addScore = () => {
-         // fetch("localhost:5785/user")
         fetch("https://level-up-do.web.app/user/15d9vJM7UV04Nh2vY2Lx", {
             method: 'PATCH',
             mode: 'cors',

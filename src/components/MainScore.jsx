@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, ButtonGroup, CardGroup } from "react-bootstrap";
+import { Button, ButtonGroup } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import CardHeader from "react-bootstrap/esm/CardHeader";
 import AddScore from "./AddScore.jsx";
@@ -25,13 +25,14 @@ export default function MainScore() {
 
   return (
     <>
+      <div className="mainDisplay">
       <div className="scoreboard">
         <ButtonGroup>
           <Card
-            bg="secondary"
+            bg="primary"
             key="secondary"
             border="primary"
-            style={{ width: "18rem", height: "18rem" }}
+            style={{ width: "18rem", height: "16rem" }}
           >
             <CardHeader>
               {" "}
@@ -40,15 +41,33 @@ export default function MainScore() {
             <Card body>
               <h2>{mainScore}</h2>
             </Card>
+            <Card.Footer>
+
+            <ButtonGroup>
+
+        <Button
+          onClick={async (e) =>
+            ( await setDailyScore(
+              creativeTime + physicalTime + funTime + mentalTime
+              ))
+            }
+            >
+          Add Points
+        </Button>
+        <AddScore dailyScore={dailyScore} setMainScore={setMainScore} />
+          </ButtonGroup>
+
+            </Card.Footer>
           </Card>
         </ButtonGroup>
       </div>
 
-      <CardGroup>
-        <Card bg="warning" text="white">
+      <div className="categories">
+  
+        <Card id="creative" bg="warning" text="white">
           <Card.Header as="h6">Creative</Card.Header>
-          <Card.Body id="creative" variant="outline-primary">
-            {creativeTime}
+          <Card.Body variant="outline-primary">
+          {`${creativeTime} points earned`}
           </Card.Body>
           <ButtonGroup>
             <Button variant="warning" onClick={() => setCreativeTime(15)}>
@@ -63,9 +82,9 @@ export default function MainScore() {
           </ButtonGroup>
         </Card>
 
-        <Card bg="info" text="white">
+        <Card id="fun" bg="info" text="white">
           <Card.Header as="h6">Fun</Card.Header>
-          <Card.Body id="fun">funTime</Card.Body>
+          <Card.Body >{`${funTime} points earned`}</Card.Body>
           {/* <Card.Footer>  */}
           <ButtonGroup>
             <Button variant="info" onClick={() => setFunTime(15)}>
@@ -81,54 +100,45 @@ export default function MainScore() {
           {/* </Card.Footer> */}
         </Card>
 
-        <Card bg="primary" text="white">
+        <Card id="mental" bg="secondary" text="white">
           <Card.Header as="h6">Mental</Card.Header>
-          <Card.Body bg="secondary" id="mental">
+          <Card.Body bg="secondary" >
+          {`${mentalTime} points earned`}
           </Card.Body>
           <ButtonGroup>
-            <Button variant="primary" onClick={() => setMentalTime(15)}>
+            <Button variant="secondary" onClick={() => setMentalTime(15)}>
               20 Minutes or less
             </Button>
-            <Button variant="primary" onClick={() => setMentalTime(20)}>
+            <Button variant="secondary" onClick={() => setMentalTime(20)}>
               40 Minutes
             </Button>
-            <Button variant="primary" onClick={() => setMentalTime(25)}>
+            <Button variant="secondary" onClick={() => setMentalTime(25)}>
               60 Minutes or more
             </Button>
           </ButtonGroup>
         </Card>
 
-        <Card bg="secondary" text="white" onClick={() => {}}>
+        <Card id="physical" bg="primary" text="white" onClick={() => {}}>
           <Card.Header as="h6">Physical</Card.Header>
-          <Card.Body id="physical">physicalTime</Card.Body>
+          <Card.Body >{`${physicalTime} points earned`}</Card.Body>
           <ButtonGroup>
-            <Button variant="secondary" onClick={() => setPhysicalTime(15)}>
+            <Button variant="primary" onClick={() => setPhysicalTime(15)}>
               20 Minutes or less
             </Button>
-            <Button variant="secondary" onClick={() => setPhysicalTime(20)}>
+            <Button variant="primary" onClick={() => setPhysicalTime(20)}>
               40 Minutes
             </Button>
-            <Button variant="secondary" onClick={() => setPhysicalTime(25)}>
+            <Button variant="primary" onClick={() => setPhysicalTime(25)}>
               60 Minutes or more
             </Button>
           </ButtonGroup>
         </Card>
-        <ButtonGroup>
-        <CardGroup>
-          
-        </CardGroup>
-        <Button
-          onClick={async (e) =>
-            ( await setDailyScore(
-              creativeTime + physicalTime + funTime + mentalTime
-              )) + console.log(dailyScore)
-            }
-            >
-          Add Points
-        </Button>
-        <AddScore dailyScore={dailyScore} setMainScore={setMainScore} />
-          </ButtonGroup>
-      </CardGroup>
+        </div>
+        </div>
+   
+
+
+        
     </>
   );
 }

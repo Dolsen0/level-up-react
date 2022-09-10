@@ -1,48 +1,59 @@
 .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding: 18px;
-  text-align: center;
-  /* width: 40vw; */
+  /* text-align: center; */
+  /* width: 80vw; */
   background-color:lavender;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.mainDisplay{
+  
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 80vw;
 }
 
 .scoreboard{
+  text-align: center;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 .mainScore{
   display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-
-
-.catRow1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #mainScoreHeader{
   color: whitesmoke;
 }
 
-
- /* #mental{
-  background-color: burlywood;
-   
+.categories{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  
 }
-/* 
+
 #creative{
-  background-color: red;
+  padding: 10px;
+  margin: 10px;
 }
-
+#mental{
+  padding: 10px;
+  margin: 10px;
+}
 #physical{
-  background-color: darkgrey;
+  padding: 10px;
+  margin: 10px;
 }
 #fun{
-  background-color: blue;
-} 
-*/
+  padding: 10px;
+  margin: 10px;
+}
