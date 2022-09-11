@@ -8,7 +8,7 @@ import SignupButton from "./SignupButton.jsx";
 export default function NavBar() {
   return (
     <>
-      <Navbar bg="light" className="navbar" sticky="top">
+      <Navbar className="navbar" sticky="top">
         <Container>
           <Navbar.Brand>
             {" "}

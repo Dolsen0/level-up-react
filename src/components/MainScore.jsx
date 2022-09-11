@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, ButtonGroup } from "react-bootstrap";
+import { Button, ButtonGroup, CardGroup } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import CardHeader from "react-bootstrap/esm/CardHeader";
 import AddScore from "./AddScore.jsx";
@@ -26,13 +26,14 @@ export default function MainScore() {
   return (
     <>
       <div className="mainDisplay">
-      <div className="scoreboard">
+      <div className="scoreCard">
+        <CardGroup className="scoreboard">
         <ButtonGroup>
           <Card
             bg="primary"
             key="secondary"
             border="primary"
-            style={{ width: "18rem", height: "16rem" }}
+            style={{ width: "20rem", height: "18rem" }}
           >
             <CardHeader>
               {" "}
@@ -53,14 +54,18 @@ export default function MainScore() {
             }
             >
           Add Points
+        
         </Button>
+        
         <AddScore dailyScore={dailyScore} setMainScore={setMainScore} />
           </ButtonGroup>
 
             </Card.Footer>
           </Card>
         </ButtonGroup>
+          </CardGroup>
       </div>
+
 
       <div className="categories">
   
