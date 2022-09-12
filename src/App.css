@@ -1,27 +1,31 @@
-.App {
-  padding: 18px;
-  background-color:lavender;
-  font-family: 'Roboto', sans-serif;
+html{
+  background: url('./background.png');
+  min-height: 100%;
+}
 
+.App {
+  height: 100vh;
+  padding: 18px;
+  background: url('./background.png');
+  font-family: "Roboto", sans-serif;
 }
 
 
-.navbar{
+.navbar {
   border-radius: 25px;
   background-color: snow;
 }
 
-.mainDisplay{
-  
+.mainDisplay {
   display: flex;
   flex-direction: row-reverse;
-  justify-content:space-between;
+  justify-content: space-between;
   width: 80vw;
   margin: 10px;
   padding: 10px;
 }
 
-.scoreboard{
+.scoreboard {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -30,42 +34,46 @@
   border-radius: 25px;
 }
 
-.mainScore{
+.mainScore {
   display: flex;
   flex-direction: column;
-
 }
 
-#mainScoreHeader{
+#mainScoreHeader {
   color: whitesmoke;
 }
 
-.categories{
+.categories {
   display: flex;
   flex-direction: column-reverse;
   padding: 10px;
   margin: 10px;
 }
 
-#creative{
+#creative {
   padding: 10px;
   margin: 10px;
   border-radius: 25px;
 }
 
-#mental{
+#mental {
   padding: 10px;
   margin: 10px;
   border-radius: 25px;
 }
-#physical{
+#physical {
   padding: 10px;
   margin: 10px;
   border-radius: 25px;
-  background-color: rgb(198,110,78);
 }
-#fun{
+#fun {
   padding: 10px;
   margin: 10px;
   border-radius: 25px;
+}
+
+footer {
+margin-left: 2rem;
+margin-bottom: -5rem;
+color: white;
 }

@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export default function AddScore({ dailyScore, setMainScore }){
@@ -21,9 +20,6 @@ export default function AddScore({ dailyScore, setMainScore }){
     return(
         <div className="newScore">
             <Button onClick={addScore}
-            // enterButton="Add"
-            // size="large"
-            // e => setScore(e.target.value)
             >
 
                 Submit Daily Score
