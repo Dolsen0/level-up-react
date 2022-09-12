@@ -51,6 +51,12 @@ html{
   margin: 10px;
 }
 
+.scoreCard{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
 #creative {
   padding: 10px;
   margin: 10px;
