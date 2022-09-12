@@ -1,6 +1,7 @@
 html{
   background: url('./background.png');
   min-height: 100%;
+  height: 100vh;
 }
 
 .App {
@@ -76,4 +77,8 @@ footer {
 margin-left: 2rem;
 margin-bottom: -5rem;
 color: white;
+}
+
+.buttonSubmit{
+  border-radius: 25%;
 }
