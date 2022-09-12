@@ -28,8 +28,8 @@ export default function MainScore() {
       <div className="mainDisplay">
       <div className="scoreCard">
         <CardGroup className="scoreboard">
-        <ButtonGroup>
           <Card
+            id="dailyScore"
             bg="primary"
             key="secondary"
             border="primary"
@@ -39,7 +39,7 @@ export default function MainScore() {
               {" "}
               <h5 id="mainScoreHeader">Daily Points</h5>{" "}
             </CardHeader>
-            <Card body>
+            <Card body className="screen">
               <h2>{mainScore}</h2>
             </Card>
             <Card.Footer>
@@ -62,7 +62,6 @@ export default function MainScore() {
 
             </Card.Footer>
           </Card>
-        </ButtonGroup>
           </CardGroup>
       </div>
 
@@ -76,10 +75,10 @@ export default function MainScore() {
           </Card.Body>
           <ButtonGroup>
             <Button variant="warning" onClick={() => setCreativeTime(15)}>
-              20 Minutes or less
+              15 Minutes or less
             </Button>
             <Button variant="warning" onClick={() => setCreativeTime(20)}>
-              40 Minutes
+              30 Minutes
             </Button>
             <Button variant="warning" onClick={() => setCreativeTime(25)}>
               60 Minutes or more
@@ -92,13 +91,13 @@ export default function MainScore() {
           <Card.Body >{`${funTime} points earned`}</Card.Body>
           {/* <Card.Footer>  */}
           <ButtonGroup>
+            <Button variant="info" onClick={() => setFunTime(10)}>
+              15 Minutes or less
+            </Button>
             <Button variant="info" onClick={() => setFunTime(15)}>
-              20 Minutes or less
+              30 Minutes
             </Button>
             <Button variant="info" onClick={() => setFunTime(20)}>
-              40 Minutes
-            </Button>
-            <Button variant="info" onClick={() => setFunTime(25)}>
               60 Minutes or more
             </Button>
           </ButtonGroup>
@@ -112,10 +111,10 @@ export default function MainScore() {
           </Card.Body>
           <ButtonGroup>
             <Button variant="secondary" onClick={() => setMentalTime(15)}>
-              20 Minutes or less
+              15 Minutes or less
             </Button>
             <Button variant="secondary" onClick={() => setMentalTime(20)}>
-              40 Minutes
+              30 Minutes
             </Button>
             <Button variant="secondary" onClick={() => setMentalTime(25)}>
               60 Minutes or more
@@ -127,13 +126,13 @@ export default function MainScore() {
           <Card.Header as="h6">Physical</Card.Header>
           <Card.Body >{`${physicalTime} points earned`}</Card.Body>
           <ButtonGroup>
-            <Button variant="primary" onClick={() => setPhysicalTime(15)}>
-              20 Minutes or less
-            </Button>
             <Button variant="primary" onClick={() => setPhysicalTime(20)}>
-              40 Minutes
+              15 Minutes or less
             </Button>
             <Button variant="primary" onClick={() => setPhysicalTime(25)}>
+              30 Minutes
+            </Button>
+            <Button variant="primary" onClick={() => setPhysicalTime(30)}>
               60 Minutes or more
             </Button>
           </ButtonGroup>

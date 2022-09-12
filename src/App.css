@@ -5,6 +5,7 @@
 
 }
 
+
 .navbar{
   border-radius: 25px;
   background-color: snow;
@@ -35,10 +36,6 @@
 
 }
 
-.scoreboard-btn-group{
-  border-radius: 25px;
-}
-
 #mainScoreHeader{
   color: whitesmoke;
 }
@@ -65,6 +62,7 @@
   padding: 10px;
   margin: 10px;
   border-radius: 25px;
+  background-color: rgb(198,110,78);
 }
 #fun{
   padding: 10px;
