@@ -53,7 +53,7 @@ export default function MainScore() {
               ))
             }
             >
-          Add Points
+          Add Score
         
         </Button>
         

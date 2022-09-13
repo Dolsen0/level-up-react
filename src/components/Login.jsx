@@ -12,7 +12,7 @@ export default function LoginButton(req, res) {
   return (
     <>
       <Button id="loginButton" variant="primary" onClick={handleShow}>
-        Login
+        Logout
       </Button>
 
       <Modal show={show} onHide={handleClose}>

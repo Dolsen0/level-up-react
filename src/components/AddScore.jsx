@@ -22,7 +22,7 @@ export default function AddScore({ dailyScore, setMainScore }){
             <Button onClick={addScore}
             >
 
-                Submit Daily Score
+                Submit Points
             </Button>
         </div>
     )

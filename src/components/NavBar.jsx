@@ -3,7 +3,6 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import FirstName from "./FirstName.jsx";
 import LoginButton from "./Login.jsx";
-import SignupButton from "./SignupButton.jsx";
 
 export default function NavBar() {
   return (
@@ -26,7 +25,7 @@ export default function NavBar() {
           <div className="navButtons">
             <ButtonGroup>
               <LoginButton />
-              <SignupButton />
+            
             </ButtonGroup>
           </div>
         </Container>
