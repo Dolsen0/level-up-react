@@ -1,6 +1,6 @@
 html{
   background: url('./background.png');
-  min-height: 100%;
+  min-height: 97%;
   
 }
 
@@ -9,13 +9,14 @@ html{
   padding: 18px;
   background: url('./background.png');
   font-family: "Roboto", sans-serif;
-  height: 100vh;
+  height: 97vh;
 }
 
 
 .navbar {
   border-radius: 25px;
   background-color: snow;
+  opacity: 0.7;
 }
 
 .mainDisplay {
